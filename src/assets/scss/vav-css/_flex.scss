@@ -1,0 +1,54 @@
+@each $property, $property-list in $flex-aligment-propirties {        
+    @each $key, $value in $property-list{
+        .#{$property}-#{$key}{
+            #{$property}: #{$value};
+        }
+    }   
+}
+
+@each $brekpoint-name, $breakpoint-value in $break-points{
+    @each $property, $property-list in $flex-aligment-propirties {        
+        @each $key, $value in $property-list{
+            @media (min-width: $breakpoint-value){
+                .#{$property}-#{$brekpoint-name}-#{$key}{
+                    #{$property}: #{$value} ;
+                }
+            }
+        }   
+    }
+}
+@each $prop, $property-list in $flex-greed-properties {        
+    @each $value in $property-list{
+        .flex-#{$prop}-#{$value}{
+            flex-#{$prop}: #{$value};
+        }
+    }   
+}
+
+@each $brekpoint-name, $breakpoint-value in $break-points{
+    @each $prop, $property-list in $flex-greed-properties {        
+        @each $value in $property-list{
+            @media (min-width: $breakpoint-value){
+                .flex-#{$prop}-#{$brekpoint-name}-#{$value}{
+                    flex-#{$prop}: #{$value} ;
+                }
+            }
+        }   
+    }
+}
+
+@each $prop, $property-list in $flex-direction {        
+    .flex-#{$prop}{
+        flex-direction: #{$prop};
+    }   
+}
+
+@each $brekpoint-name, $breakpoint-value in $break-points{
+    @each $prop, $property-list in $flex-direction { 
+        @media (min-width: $breakpoint-value){       
+            .flex-#{$brekpoint-name}-#{$prop}{
+                flex-direction: #{$prop};
+            }   
+        }
+    }   
+}

@@ -1,0 +1,23 @@
+.disc-project{
+    padding-top: 0px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 48px;
+    align-items: center;
+
+    h2{
+        margin-bottom: 0;
+    }
+    @include calculateResponsiveProperty(1024px, 1400px, 0px, 60px, padding-top);
+
+    @media (max-width: 1024px){
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+}
+
+.disc-project.pt-0{
+    padding-top: 0;
+}
+
+

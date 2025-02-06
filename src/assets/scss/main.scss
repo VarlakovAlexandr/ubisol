@@ -1,0 +1,159 @@
+@use "sass:math";
+@import 'functions';
+
+@mixin calculateResponsiveProperty($startBreakPoint, $endBreakPoint, $startValue, $finishValue, $property ){
+	@media (min-width: $startBreakPoint){
+		#{$property}: calculateResponsiveValue( $startBreakPoint, $endBreakPoint, $startValue, $finishValue );
+		
+	}
+	@media (min-width: $endBreakPoint){
+		#{$property}: $finishValue;
+	}
+}
+
+:root{
+	font-family: "Roboto";
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+button{
+	cursor: pointer;
+}
+a{
+	text-decoration: none;
+}
+button, textarea, input{
+	background: transparent;
+	border: none;
+	outline: none;
+}
+textarea, input{
+	width: 100%;
+}
+a, textarea, input, button{
+	transition: ease-in 300ms;
+	font-family: inherit;
+	outline: none;
+}
+a, textarea, input, button{
+	font-family: var(--font-family);
+}
+
+textarea{
+	resize: none;
+}
+
+ul{
+	list-style: none;
+}
+
+address{
+	font-style: normal;
+}
+
+html{
+	
+	font-family: var(--font-family);
+}
+body{
+	display: flex;
+	flex-direction: column;	
+	min-height: 100vh;
+	background: #f4f4f4;	
+}
+
+body.no-scroll{
+	overflow: hidden;
+}
+main{
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+	//row-gap: 150px;
+	//padding-bottom: 220px;
+	row-gap: 60px;
+	padding-bottom: 60px;
+	@include calculateResponsiveProperty(768px, 1400px, 60px, 100px, row-gap);
+
+	@include calculateResponsiveProperty(768px, 1400px, 60px, 120px, padding-bottom);
+	
+}
+
+section, header, footer{
+	padding-left: 20px;
+	padding-right: 20px;
+
+	@include calculateResponsiveProperty(390px, 767px, 20px, 32px, padding-left);
+	@include calculateResponsiveProperty(390px, 767px, 20px, 32px, padding-right);
+
+	@include calculateResponsiveProperty(768px, 1024px, 32px, 48px, padding-left);
+	@include calculateResponsiveProperty(768px, 1024px, 32px, 48px, padding-right);
+}
+
+.container{
+	max-width: 1300px;
+	margin: 0 auto;
+}
+
+
+.bg-gray{
+	  
+}
+
+h1{
+	font-size: 36px;        
+	line-height: 1.25;
+	font-weight: 400;
+	@include calculateResponsiveProperty(1024px, 1400px, 36px, 60px, font-size);
+}
+h2{
+	font-size: 28px;		
+	color: rgb(0, 0, 0);
+	font-weight: 400;
+	line-height: 1.2;
+	margin-bottom: 32px;
+	@include calculateResponsiveProperty(1024px, 1400px, 28px, 50px, font-size);
+	@include calculateResponsiveProperty(1024px, 1400px, 32px, 60px, margin-bottom);
+}
+h3{
+	font-size: 22px;		
+	color: rgb(0, 0, 0);
+	font-weight: 400;
+	line-height: 1.2;	
+	@include calculateResponsiveProperty(1024px, 1400px, 22px, 40px, font-size);	
+}
+
+p{
+	font-size: 16px;
+	
+	color: #000;
+	line-height: 1.263;  
+
+	@include calculateResponsiveProperty(1024px, 1400px, 16px, 19px, font-size);	
+}
+
+.overflow{
+	width: 100%;
+	overflow: hidden
+}
+
+@import 'units/intro';
+@import 'units/header';
+@import 'units/mob-menu';
+@import 'units/footer';
+@import 'units/our-competencies';
+@import 'units/facts';
+@import 'units/cases';
+@import 'units/about';
+@import 'units/disc-project';
+@import 'units/career';
+@import 'units/contacts';
+@import 'units/corporate-values';
+@import 'units/advantages';
+@import 'units/consalting';
+@import 'units/modals';
+@import 'units/ui';

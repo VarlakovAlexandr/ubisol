@@ -1,0 +1,45 @@
+/*font-style*/
+.fs-normal{
+    font-style: normal;
+}
+.fs-italic{
+    font-style: italic;
+}
+/*font-style*/
+
+/*font-weight*/
+.fw-700, .fw-bold{
+    font-weight: bold;
+}
+.fw-600{
+    font-weight: 600;
+}
+.fw-500{
+    font-weight: 500;
+}
+.fw-400{
+    font-weight: 400;
+}
+.fw-300{
+    font-weight: 300;
+}
+/*font-weight*/
+
+/*text-align*/
+@each $property-name in $text-align-properties {
+    .text-#{$property-name} {
+        text-align: $property-name;        
+    }
+        
+}
+
+@each $brekpoint-name, $breakpoint-value in $break-points{
+    @media (min-width: $breakpoint-value){
+        @each $property-name in $text-align-properties {
+            .text-#{$brekpoint-name}-#{$property-name} {
+                text-align: $property-name;                    
+            }
+        }
+    }
+}
+/*text-align*/

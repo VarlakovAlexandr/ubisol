@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ru_RU">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Краткое описание страницы"/>
+    <title>Сайт</title>
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/roboto.min.css">
+    <link rel="stylesheet" href="assets/css/hystmodal.min.css">
+    <link rel="stylesheet" href="assets/css/main.min.css">     
+    
+</head>
+<body >
+
+    <div class="mob-menu ">            
+        <div class="mob-menu__content">
+            
+            <div class="mob-menu__body">
+                <nav class="mob-menu__nav">
+                    <ul class="mob-menu__list"> 
+                        <li class="mob-menu__item"><a href="about-us.html" class="mob-menu__link">О нас</a></li>
+                        <li class="mob-menu__item"><a href="cases.html" class="mob-menu__link">Кейсы</a></li>
+                        <li class="mob-menu__item"><a href="about-us.html" class="mob-menu__link">Карьера</a></li>
+                        <li class="mob-menu__item"><a href="news.html" class="mob-menu__link">Контакты</a></li>
+                        <li class="mob-menu__item mob-menu__item_btn"> <button class="btn btn-blue" >Обсудить проект</button></li>
+                    </ul>
+                </nav>                
+            </div>
+            
+        </div>
+        <img src="assets/img/index/index-cheese.png" alt="" class="mob-menu__chess">
+    </div>
+
+    <header class="header header-dark-text">
+        <div class="container">
+            <a href="index.html" class="header-logo"><img src="assets/img/blue-logo.png" alt=""></a>
+                
+                <nav class="h-nav">
+                    <ul class="h-menu">
+                        <li class="h-menu__item"><a href="about-us.html" class="h-menu__link">О нас</a></li>
+                        <li class="h-menu__item"><a href="cases.html" class="h-menu__link">Кейсы</a></li>
+                        <li class="h-menu__item"><a href="career.html" class="h-menu__link current">Карьера</a></li>
+                        <li class="h-menu__item"><a href="contacts.html" class="h-menu__link">Контакты</a></li>                        
+                    </ul>
+                </nav>
+                <button class="btn btn-blue" data-hystmodal="#feedback-modal">Обсудить проект</button>
+
+
+                <button class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+           
+        </div>
+    </header>
+    <main>
+        <section class="cases-intro">
+            <div class="container">
+                <h1>Кейсы</h1>
+                <div class="cases">
+                    <a href="#" class="cases__item" target="_blank">
+                        <img src="assets/img/FirCRM-logo.png" alt="">
+                    </a>
+                    <a href="#" class="cases__item" target="_blank">
+                        <img src="assets/img/2vito-logo.png" alt="">
+                    </a>
+                    
+                </div>
+
+                <div class="cases-text-block">
+                    <h3>Мы работаем с людьми и для людей</h3>
+                    <p>Ubisol это аббревиатура выражения <b class="text-blue">«unified business internet solutions»</b> (Унифицированный бизнес интернет решения). Этот девиз нашей компании отражает стремление к созданию безаварийных информационных систем и обеспечению непрерывности бизнес—процессов. Тестируя и внедряя новейшие технологии в Ubisol, мы создаем плацдарм для внедрения всего лучшего у наших клиентов.</p>
+                </div>
+
+                <div class="text-center">
+                    <a href="#" class="link link-black">Подробнее о нас</a>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <div class="disc-project pt-0">
+                    <h2>Обсудим Ваш проект?</h2>
+                    <button class="btn btn-blue btn-lg" data-hystmodal="#feedback-modal">Обсудить проект</button>
+                </div>
+                
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <img src="assets/img/footer-bg.png" alt="" class="footer__bg">
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-mobile-logo-slot">
+                    <a href="index.html" class="footer-logo" data-to-jump=".footer-desktop-logo-slot" data-media-jump="768">
+                        <img src="assets/img/white-logo.png" alt="">
+                    </a>
+                </div>
+                
+
+                <p class="footer-top__title">Остались вопросы?</p>
+                <div class="footer-top__contacts">
+                    <a href="#">
+                        <img src="assets/img/icons/telegram.svg" alt="">
+                    </a>
+                    <a href="#">
+                        <img src="assets/img/icons/whatsapp.svg" alt="">
+                    </a>
+                    <a href="#">
+                        <img src="assets/img/icons/vk.svg" alt="">
+                    </a>
+                </div>
+                <p class="footer-top__subtitle">Cвяжитесь с нами любым удобным способом</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-bottom__left">
+                    <a href="#">Политика конфиденциальности</a>
+                    <p>© 2024 Все права защищены</p>
+                </div>
+
+                <div class="footer-desktop-logo-slot">
+
+                </div>
+
+                
+                <div class="footer-bottom__right">
+                    <a href="tel:+79150864035" class="footer-bottom__phone">+7 (915) 086-4035</a>
+                    <button class="footer-bottom__btn" data-hystmodal="#feedback-modal">Заказать звонок</button>
+                </div>
+            </div>
+        </div>
+        
+    </footer>
+
+    <div class="hystmodal"  aria-hidden="true">
+        <div class="hystmodal__wrap">
+            <div class="modal show fade" id="thanks-modal" tabindex="-1" role="dialog" aria-labelledby="callbackLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        
+
+                        <div class="modal-wrap">
+                            <div class="modal-body thanks-body">
+                                
+                                <button class="close-modal" data-hystclose="">
+                                    <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M9.66486 27.1658L27.1658 9.66488C27.324 9.50665 27.4129 9.29204 27.4129 9.06826C27.4129 8.84448 27.324 8.62987 27.1658 8.47164C27.0075 8.31341 26.7929 8.22451 26.5691 8.22451C26.3454 8.22451 26.1307 8.31341 25.9725 8.47164L8.47162 25.9725C8.31339 26.1308 8.22449 26.3454 8.22449 26.5692C8.22449 26.7929 8.31339 27.0075 8.47162 27.1658C8.62986 27.324 8.84447 27.4129 9.06824 27.4129C9.29202 27.4129 9.50663 27.324 9.66486 27.1658Z" fill="#000" />
+                                        <path d="M8.47162 9.66486L25.9725 27.1658C26.1307 27.324 26.3454 27.4129 26.5691 27.4129C26.7929 27.4129 27.0075 27.324 27.1658 27.1658C27.324 27.0075 27.4129 26.7929 27.4129 26.5691C27.4129 26.3454 27.324 26.1307 27.1658 25.9725L9.66486 8.47162C9.50662 8.31339 9.29201 8.22449 9.06824 8.22449C8.84446 8.22449 8.62985 8.31339 8.47162 8.47162C8.31338 8.62986 8.22449 8.84447 8.22449 9.06824C8.22449 9.29202 8.31338 9.50663 8.47162 9.66486Z" fill="#000" />
+                                    </svg>
+                                    
+                                </button>
+                                <p class="text-22 fw-600 text-center">Ваша заявка успешно отправлена</p>
+                                
+                                <div class="mf-submit-wrap" data-hystclose="">
+                                    <button class="thanks-close btn btn-blue">Продолжить</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+
+        </div>
+    </div>
+
+
+    <div class="hystmodal"  aria-hidden="true">
+        <div class="hystmodal__wrap">
+            <div class="modal show fade" id="feedback-modal" tabindex="-1" role="dialog" aria-labelledby="callbackLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        
+                        <button class="hystmodal__close" data-hystclose="">Закрыть</button>
+                        <div class="modal-wrap">
+                            <div class="modal-body thanks-body">
+                                <h3 class="text-center">Напишите , что-нибудь</h3>
+                                <form  id="feedback-form">
+                                    <div class="modal-form-fields">
+                                        <input type="text" name="name" placeholder="Ваше имя" required>
+                                        <input type="tel" name="phone" placeholder="Телефон" required>
+                                        <textarea name="message" placeholder="Сообщение" ></textarea>
+                                    </div>
+                                    
+                                    <p class="text-center">Нажимая, кнопку "Отправить" вы соглашаетесь на обработку своих <a href="#" target="_blank" class="modal-privacy-link">персональных данных</a></p>
+    
+    
+                                    <div class="mf-submit-wrap" >
+                                        <button class=" btn btn-blue">Отправить</button>
+                                    </div>
+                                </form>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <script src="assets/js/hystmodal.min.js"></script>
+    <script src="assets/js/imask.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

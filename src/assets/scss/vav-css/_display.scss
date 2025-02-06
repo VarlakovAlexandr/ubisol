@@ -1,0 +1,17 @@
+@each $property-name in $display-properties {
+    .d-#{$property-name} {
+        display: $property-name ;
+        
+    }
+        
+}
+
+@each $brekpoint-name, $breakpoint-value in $break-points{
+    @media (min-width: $breakpoint-value){
+        @each $property-name in $display-properties {
+            .d-#{$brekpoint-name}-#{$property-name} {
+                display: $property-name;                    
+            }
+        }
+    }
+}

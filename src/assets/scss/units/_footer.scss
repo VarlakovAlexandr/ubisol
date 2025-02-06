@@ -1,0 +1,197 @@
+.footer{
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    color: #fff;
+
+    p{
+        color: #fff;
+    }
+}
+
+.footer__bg{
+    width: calc(100% + 2px);
+    height: auto;
+    min-height: 100%;
+    max-height: 100%;
+    top: 0;
+    left: 50%;
+    position: absolute;
+    object-fit: cover;
+    object-position: top;
+    transform: translate(-50%, 0);
+}
+
+.footer-top{
+    padding: 60px 0 40px;
+    position: relative;
+    z-index: 10;
+
+
+    @include calculateResponsiveProperty(1024px, 1400px, 60px, 130px, padding-top);
+    @include calculateResponsiveProperty(1024px, 1400px, 40px, 130px, padding-bottom);
+
+
+    .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 16px;
+        @include calculateResponsiveProperty(1024px, 1400px, 16px, 32px, row-gap);
+    }
+    
+}
+
+.footer-top__title{
+    font-size: 28px;        
+    line-height: 1.25;
+    font-weight: 400;
+    text-align: center;
+    @include calculateResponsiveProperty(1024px, 1400px, 28px, 50px, font-size);
+}
+.footer-top__contacts{
+    display: flex;
+    align-items: center;
+    column-gap: 16px;
+    @include calculateResponsiveProperty(1024px, 1400px, 16px, 30px, column-gap);
+    a{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+
+
+        @include calculateResponsiveProperty(1024px, 1400px, 40px, 72px, width);
+        @include calculateResponsiveProperty(1024px, 1400px, 40px, 72px, height);
+
+        background-color: rgb(0, 155, 213);
+        border-radius: 50%;
+                  
+
+        img{
+            width: 24px;
+            height: auto;
+            @include calculateResponsiveProperty(1024px, 1400px, 24px, 40px, width);
+            
+        }
+    }
+}
+.footer-top__subtitle{
+    font-size: 18px;
+    text-align: center;
+    @include calculateResponsiveProperty(1024px, 1400px, 18px, 24px, font-size);
+    
+}
+
+
+.footer-bottom{
+    position: relative;
+    z-index: 10;
+    padding-bottom: 24px;
+    
+    @include calculateResponsiveProperty(1024px, 1400px, 24px, 42px, padding-bottom);
+    .container{
+        display: flex;
+
+        flex-direction: column;
+        row-gap: 48px;
+        @media ( min-width: 768px ){
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+}
+.footer-bottom__left{
+    display: flex;
+    
+    justify-content: space-between;
+    flex-direction: column;
+    font-size: 14px;
+
+    text-align: center;
+    row-gap: 14px;
+    @include calculateResponsiveProperty(768px, 1400px, 14px, 19px, font-size);
+    color: #fff;
+    order: 2;
+    @media ( min-width: 768px ){
+        order: unset;
+        text-align: left;
+        flex-direction: column;
+        row-gap: 24px;
+        justify-content: initial;
+        align-items: flex-start;
+    }
+    a{
+        color: #fff;
+        
+        &:hover{
+            opacity: .7;
+        }
+        order: 2;
+        @media ( min-width: 768px ){
+            order: unset;
+            
+        }
+    }
+}
+.footer-logo{
+    width: 90px;
+
+    @include calculateResponsiveProperty(768px, 1400px, 90px, 132px, width);
+
+    img{
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+.footer-bottom__right{
+    display: none;
+    justify-content: space-between;
+
+    order: 1;
+    @media ( min-width: 768px ){
+        display: flex;
+        order: unset;
+        justify-content: initial;
+        flex-direction: column;
+        row-gap: 16px;
+        align-items: flex-end;
+    }
+}
+
+.footer-bottom__phone{
+    //font-size: 26px;
+    font-size: 14px;
+    color: #fff;
+    @include calculateResponsiveProperty(768px, 1400px, 18px, 26px, font-size);
+    &:hover{
+        opacity: .7;
+    }
+}
+
+.footer-bottom__btn{
+    font-size: 14px;
+    color: #fff;
+    @include calculateResponsiveProperty(768px, 1400px, 14px, 19px, font-size);
+    &:hover{
+        opacity: .7;
+    }
+}
+
+
+.footer-mobile-logo-slot{
+    margin-bottom: 16px;
+    @media (min-width: 768px){
+        display: none;
+    }
+}
+
+.footer-desktop-logo-slot{
+    display: none;
+    @media (min-width: 768px){
+        display: flex;
+    }
+}
