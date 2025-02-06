@@ -1577,7 +1577,17 @@ p {
 }
 
 .cases-intro {
-  padding-top: 180px;
+  padding-top: 94px;
+}
+@media (min-width: 1024px) {
+  .cases-intro {
+    padding-top: calc(94px + (1vw - 10.24px) * 22.8723404255);
+  }
+}
+@media (min-width: 1400px) {
+  .cases-intro {
+    padding-top: 180px;
+  }
 }
 .cases-intro h1 {
   font-size: 28px;

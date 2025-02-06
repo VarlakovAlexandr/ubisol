@@ -34,8 +34,8 @@
 }
 
 .cases-intro{
-    padding-top: 180px;
-
+    padding-top: 94px;
+    @include calculateResponsiveProperty(1024px, 1400px, 94px, 180px, padding-top);
     h1{
         font-size: 28px;		
         color: rgb(0, 0, 0);
